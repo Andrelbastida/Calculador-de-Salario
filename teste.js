@@ -1,8 +1,8 @@
 var btnCalcular = document.getElementById("calcular");
-btnCalcular.addEventListener("click", calculando);
+btnCalcular.addEventListener("click", calcular);
 
-function calculando() {
-    var salarioBruto = Number(document.getElementById("salario").value)
+function calcular() {
+    var salario = document.getElementById("salario").value;
 
     var inss = calcularINSS(salario);
     var irrf = calcularIRRF(salario, inss)
@@ -118,7 +118,5 @@ if (valVT > 0) {
 
     tabela += "</table>";
 
-
+document.getElementById("resultado").innerHTML = tabela;
 }
-document.getElementById("resultado2").innerHTML = tabela;
-    
